@@ -1,0 +1,19 @@
+
+<ion-item button (click)="viewFunc()">
+
+  <ion-label>
+    <h4 class="todos-ui-title">{{todo.title}}</h4>
+    <!-- The status component -->
+    <todos-ui-todo-status [todo]="todo"></todos-ui-todo-status>
+  </ion-label>
+
+  <ion-buttons slot="end">
+
+    <ion-button class="todos-ui-more-btn" fill="clear" title="more">
+      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"
+      (click)="presentActionSheet()"></ion-icon>
+    </ion-button>
+
+  </ion-buttons>
+
+</ion-item>

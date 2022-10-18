@@ -1,0 +1,27 @@
+
+<ion-header *ngIf="showTitle">
+  <ion-toolbar>
+    <ion-title>{{pageTitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <vicky-ionic-ng-data-ctx-ui-loader [initialData]="loaderInitialData" [streamFunction]="streamFunction" [idConfig]="idConfig" [emptyMsg]="emptyMsg" [progressSpinnerType]="spinnerType" (fatalError)="onFatalError()" (dataChange)="onDataChange($event)" (loaderStateChange)="onLoaderStateChange($event)">
+  </vicky-ionic-ng-data-ctx-ui-loader>
+
+  <ng-container *ngIf="loaderState == LOADER_STATE.LOADED">
+
+    <h2>
+      {{todo.title}}
+    </h2>
+
+    <p>
+      {{todo.description}}
+    </p>
+
+    <todos-ui-todo-status></todos-ui-todo-status>
+
+  </ng-container>
+
+</ion-content>

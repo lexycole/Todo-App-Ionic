@@ -1,0 +1,16 @@
+
+ion-item {
+  cursor: var(--todos-ui-item-cursor);
+}
+
+.todos-ui-favicon {
+  img{
+    width: var(--todos-ui-favicon-size);
+    height: var(--todos-ui-favicon-size);
+    object-fit: cover;
+  }
+}
+
+.todos-ui-title {
+  font-size: var(--todos-ui-title-font-size);
+}
